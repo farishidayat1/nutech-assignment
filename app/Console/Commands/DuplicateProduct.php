@@ -26,8 +26,9 @@ class DuplicateProduct extends Command
      */
     public function handle()
     {
-        $product = Product::first();
-
+        $product = Product::where('id', 1)->first();
+        Product::truncate();
+        
         for($i = 0; $i <= 20; $i++) {
             Product::create([
                 'name' => $product->name.' '.$i,

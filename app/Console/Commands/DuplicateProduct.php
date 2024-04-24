@@ -30,7 +30,7 @@ class DuplicateProduct extends Command
 
         for($i = 0; $i <= 20; $i++) {
             Product::create([
-                'name' => $product->name,
+                'name' => $product->name.' '.$i,
                 'category' => $product->category,
                 'purchase_price' => $product->purchase_price,
                 'selling_price' => $product->selling_price,
